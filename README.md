@@ -1,70 +1,155 @@
-# Getting Started with Create React App
+# 🌟 Luminare Eventos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Criamos experiências únicas e memoráveis para seus eventos especiais**
 
-## Available Scripts
+A Luminare Eventos é uma empresa especializada em planejamento e execução de eventos únicos e personalizados. Com mais de 10 anos de experiência no mercado, transformamos suas ideias em momentos inesquecíveis.
 
-In the project directory, you can run:
+## 🎯 Sobre o Projeto
 
-### `npm start`
+Este é o website oficial da Luminare Eventos, desenvolvido em React para apresentar nossos serviços e facilitar o contato com nossos clientes. O site apresenta um design moderno e elegante que reflete a qualidade dos nossos serviços.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### ✨ Características
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Design Responsivo**: Interface adaptável para todos os dispositivos
+- **Animações Fluidas**: Experiência visual envolvente com animações CSS avançadas
+- **Navegação Intuitiva**: Menu fixo com ancoragem suave entre seções
+- **Visual Profissional**: Gradientes e efeitos visuais que transmitem sofisticação
+- **Otimizado para Performance**: Carregamento rápido e experiência fluida
 
-### `npm test`
+## 🚀 Tecnologias Utilizadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React 19.1.1** - Biblioteca JavaScript para interfaces de usuário
+- **CSS3** - Estilização avançada com animações e gradientes
+- **Google Fonts (Poppins)** - Tipografia moderna e elegante
+- **Create React App** - Configuração inicial do projeto
 
-### `npm run build`
+## 🎨 Serviços Oferecidos
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🎉 Festas Corporativas
+Eventos empresariais únicos que fortalecem sua marca e conectam sua equipe.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 💍 Casamentos
+Celebrações de amor personalizadas, cuidando de cada detalhe do seu dia especial.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🎂 Aniversários
+Festas de aniversário memoráveis para todas as idades e gostos.
 
-### `npm run eject`
+### 🎓 Formaturas
+Cerimônias de formatura elegantes para celebrar suas conquistas.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🏢 Eventos Empresariais
+Conferências, seminários e workshops profissionais de alto nível.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🎪 Eventos Temáticos
+Experiências imersivas com temas personalizados e decoração exclusiva.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🛠️ Instalação e Execução
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Pré-requisitos
+- Node.js (versão 14 ou superior)
+- npm ou yarn
 
-## Learn More
+### Instalação
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Clone o repositório:
+```bash
+git clone https://github.com/Gugalzg/Luminare-Eventos.git
+cd luminare
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Instale as dependências:
+```bash
+npm install
+```
 
-### Code Splitting
+### Comandos Disponíveis
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### `npm start`
+Executa o aplicativo em modo de desenvolvimento.\
+Abra [http://localhost:3000](http://localhost:3000) para visualizar no navegador.
 
-### Analyzing the Bundle Size
+A página será recarregada automaticamente quando você fizer alterações.\
+Você também verá erros de lint no console.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### `npm test`
+Inicia o executor de testes no modo interativo.\
+Veja mais informações sobre [execução de testes](https://facebook.github.io/create-react-app/docs/running-tests).
 
-### Making a Progressive Web App
+#### `npm run build`
+Compila o aplicativo para produção na pasta `build`.\
+Ele agrupa corretamente o React no modo de produção e otimiza a compilação para melhor desempenho.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+A compilação é minificada e os nomes dos arquivos incluem hashes.\
+Seu aplicativo está pronto para ser implantado!
 
-### Advanced Configuration
+#### `npm run eject`
+**Nota: esta é uma operação unidirecional. Uma vez que você `eject`, não pode voltar atrás!**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Se você não estiver satisfeito com as escolhas de ferramentas de compilação e configuração, pode `eject` a qualquer momento.
 
-### Deployment
+## 📁 Estrutura do Projeto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+luminare/
+├── public/
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo-luminare.png
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+├── src/
+│   ├── App.css          # Estilos principais da aplicação
+│   ├── App.js           # Componente principal
+│   ├── App.test.js      # Testes do componente App
+│   ├── index.css        # Estilos globais
+│   ├── index.js         # Ponto de entrada da aplicação
+│   ├── reportWebVitals.js
+│   └── setupTests.js
+├── package.json
+└── README.md
+```
 
-### `npm run build` fails to minify
+## 🎨 Paleta de Cores
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Roxo Principal**: `#8B5FBF` - Cor primária da marca
+- **Dourado**: `#E8B86D` - Cor de destaque e elegância
+- **Gradientes**: Combinações suaves entre roxo e dourado
+- **Neutros**: Tons de branco e cinza para contraste
+
+## 📱 Contato
+
+- **Telefone**: (11) 9999-9999
+- **Email**: contato@luminare.com.br
+- **Localização**: São Paulo, SP
+
+## 🤝 Contribuição
+
+Contribuições são bem-vindas! Para contribuir:
+
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+
+## 🌐 Deploy
+
+O projeto pode ser facilmente implantado em plataformas como:
+- Vercel
+- Netlify
+- GitHub Pages
+- Firebase Hosting
+
+Para deploy, execute `npm run build` e carregue a pasta `build` para sua plataforma de hospedagem preferida.
+
+---
+
+**Desenvolvido com ❤️ pela equipe Luminare Eventos**
+
+*Transformando sonhos em realidade, um evento por vez.*
