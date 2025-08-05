@@ -1,0 +1,267 @@
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 55px 5% 0 5%;
+  position: relative;
+  background: linear-gradient(135deg, #f8f9ff 0%, #fff5f0 100%);
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 40%;
+  height: 200%;
+  background: radial-gradient(ellipse, rgba(139, 95, 191, 0.1) 0%, transparent 70%);
+  animation: pulse 4s ease-in-out infinite;
+  z-index: 1;
+}
+
+/* Hero Background Effects */
+.hero-bg-effects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(139, 95, 191, 0.3) 0%, transparent 70%);
+  animation: breathe 4s ease-in-out infinite;
+}
+
+.glow-orb.orb1 {
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.glow-orb.orb2 {
+  width: 150px;
+  height: 150px;
+  top: 60%;
+  right: 10%;
+  animation-delay: 1.5s;
+  background: radial-gradient(circle, rgba(232, 184, 109, 0.3) 0%, transparent 70%);
+}
+
+.glow-orb.orb3 {
+  width: 100px;
+  height: 100px;
+  bottom: 20%;
+  left: 15%;
+  animation-delay: 3s;
+  background: radial-gradient(circle, rgba(139, 95, 191, 0.2) 0%, transparent 70%);
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: #2d1b4e;
+  opacity: 0;
+  animation: slideInUp 1s ease-out 0.2s forwards;
+}
+
+.hero .highlight {
+  background: linear-gradient(135deg, #8B5FBF, #E8B86D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.hero .highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(135deg, #8B5FBF, #E8B86D);
+  animation: underlineExpand 1s ease-out 1.5s forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  color: #666;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  opacity: 0;
+  animation: slideInUp 1s ease-out 0.4s forwards;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: slideInUp 1s ease-out 0.6s forwards;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #8B5FBF, #E8B86D);
+  color: white;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.primary-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transition: all 0.6s ease;
+  transform: translate(-50%, -50%);
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(139, 95, 191, 0.4);
+}
+
+.primary-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.secondary-btn {
+  background: transparent;
+  color: #8B5FBF;
+  padding: 1rem 2.5rem;
+  border: 2px solid #8B5FBF;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background: #8B5FBF;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Hero Visual */
+.hero-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.logo-container {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-shape.shape1 {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #8B5FBF, #6B46C1);
+  top: 10%;
+  left: 10%;
+  animation: float 4s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.floating-shape.shape2 {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #E8B86D, #F59E0B);
+  top: 20%;
+  right: 15%;
+  animation: float 5s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.floating-shape.shape3 {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #8B5FBF, #E8B86D);
+  bottom: 20%;
+  left: 20%;
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.floating-shape.shape4 {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #F59E0B, #8B5FBF);
+  top: 80%;
+  right: 20%;
+  animation: float 4.5s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.floating-shape.shape5 {
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(135deg, #6B46C1, #E8B86D);
+  bottom: 40%;
+  right: 30%;
+  animation: float 5.5s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.hero-logo {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-logo-img {
+  height: 500px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(139, 95, 191, 0.3));
+  animation: float 8s ease-in-out infinite;
+}

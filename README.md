@@ -15,6 +15,9 @@ Este é o website oficial da Luminare Eventos, desenvolvido em React para aprese
 - **Navegação Intuitiva**: Menu fixo com ancoragem suave entre seções
 - **Visual Profissional**: Gradientes e efeitos visuais que transmitem sofisticação
 - **Otimizado para Performance**: Carregamento rápido e experiência fluida
+- **Componentes Modulares**: Arquitetura React organizada em componentes reutilizáveis
+- **Efeitos Interativos**: Hover effects, partículas flutuantes e elementos glassmorphism
+- **Design System Consistente**: Paleta de cores coesa e tipografia moderna
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -94,24 +97,83 @@ luminare/
 ├── public/
 │   ├── favicon.ico
 │   ├── index.html
-│   ├── logo-luminare.png
+│   ├── logo-luminare.png        # Logo principal da Luminare
 │   ├── logo192.png
 │   ├── logo512.png
 │   ├── manifest.json
 │   └── robots.txt
 ├── src/
-│   ├── App.css          # Estilos principais da aplicação
-│   ├── App.js           # Componente principal
-│   ├── App.test.js      # Testes do componente App
-│   ├── index.css        # Estilos globais
-│   ├── index.js         # Ponto de entrada da aplicação
-│   ├── reportWebVitals.js
-│   └── setupTests.js
+│   ├── App.css                  # Estilos principais e animações globais
+│   ├── App.js                   # Componente principal da aplicação
+│   ├── App.test.js              # Testes do componente App
+│   ├── index.css                # Estilos globais e reset CSS
+│   ├── index.js                 # Ponto de entrada da aplicação
+│   ├── reportWebVitals.js       # Métricas de performance
+│   ├── setupTests.js            # Configuração dos testes
+│   └── components/              # Componentes React organizados por funcionalidade
+│       ├── About/
+│       │   ├── About.jsx        # Seção "Sobre a Luminare"
+│       │   └── About.css        # Estilos com gradientes e animações
+│       ├── Background/
+│       │   ├── Background.jsx   # Componente de partículas flutuantes
+│       │   └── Background.css   # Animações de partículas
+│       ├── Contact/
+│       │   ├── Contact.jsx      # Seção de contato com informações
+│       │   └── Contact.css      # Cards de contato com efeitos hover
+│       ├── Header/
+│       │   ├── Header.jsx       # Navegação fixa com logo e menu
+│       │   └── Header.css       # Header glassmorphism e efeitos
+│       ├── Hero/
+│       │   ├── Hero.jsx         # Seção principal/banner do site
+│       │   └── Hero.css         # Animações complexas e layout responsivo
+│       └── Services/
+│           ├── Services.jsx     # Grid de serviços oferecidos
+│           └── Services.css     # Cards interativos com hover effects
 ├── package.json
 └── README.md
 ```
 
-## 🎨 Paleta de Cores
+## 🎨 Detalhes Técnicos
+
+### Componentes Principais
+
+#### 🏠 **Header Component**
+- **Funcionalidade**: Navegação fixa no topo da página
+- **Características**: Efeito glassmorphism, logo responsivo, menu de navegação
+- **Animações**: Hover effects nos links, transformações suaves
+- **Responsividade**: Menu collapse em dispositivos móveis
+
+#### 🌟 **Hero Component** 
+- **Funcionalidade**: Seção principal/banner do site
+- **Características**: Layout em duas colunas, call-to-actions, elementos flutuantes
+- **Animações**: Partículas flutuantes, efeitos de glow, animações de entrada
+- **Elementos**: Logo principal, formas geométricas animadas
+
+#### ⚡ **Services Component**
+- **Funcionalidade**: Apresentação dos serviços em grid
+- **Características**: Cards interativos com ícones, descrições detalhadas
+- **Animações**: Hover effects 3D, transformações de escala, efeitos de glow
+- **Layout**: Grid responsivo adaptável
+
+#### 📖 **About Component**
+- **Funcionalidade**: Informações sobre a empresa
+- **Características**: Design dark theme, gradientes animados
+- **Animações**: Efeitos de breathing, text glow, fade-in sequencial
+- **Conteúdo**: História da empresa, valores, experiência
+
+#### 📞 **Contact Component**
+- **Funcionalidade**: Informações de contato
+- **Características**: Cards glassmorphism, informações estruturadas
+- **Animações**: Aurora effects, shimmer transitions, hover interactions
+- **Layout**: Grid de contatos com informações essenciais
+
+#### 🌌 **Background Component**
+- **Funcionalidade**: Partículas de fundo animadas
+- **Características**: Elementos decorativos flutuantes
+- **Animações**: Movimento constante, efeitos de profundidade
+- **Performance**: Otimizado para não impactar performance
+
+### Paleta de Cores Detalhada
 
 - **Roxo Principal**: `#8B5FBF` - Cor primária da marca
 - **Dourado**: `#E8B86D` - Cor de destaque e elegância
