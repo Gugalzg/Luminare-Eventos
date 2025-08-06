@@ -1,6 +1,11 @@
 import './Header.css';
+import { openWhatsApp } from '../../utils/whatsapp';
 
 function Header() {
+  const handleWhatsAppClick = () => {
+    openWhatsApp('', 'header');
+  };
+
   return (
     <header className="header">
       <div className="logo">
@@ -12,7 +17,7 @@ function Header() {
         <a href="#sobre">Sobre</a>
         <a href="#contato">Contato</a>
       </nav>
-      <button className="cta-button">
+      <button className="cta-button" onClick={handleWhatsAppClick}>
         <span>Solicitar Orçamento</span>
       </button>
     </header>

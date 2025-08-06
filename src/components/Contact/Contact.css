@@ -79,6 +79,18 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+.contact-item.clickable {
+  cursor: pointer;
+}
+
+.contact-item.clickable:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(139, 95, 191, 0.8);
+  box-shadow: 
+    0 15px 35px rgba(139, 95, 191, 0.3),
+    0 0 60px rgba(232, 184, 109, 0.2);
+}
+
 .contact-item::before {
   content: '';
   position: absolute;
@@ -114,4 +126,19 @@
   font-size: 1.1rem;
   margin: 0;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.click-hint {
+  display: block;
+  font-size: 0.85rem;
+  color: #8B5FBF;
+  margin-top: 8px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.contact-item.clickable:hover .click-hint {
+  opacity: 1;
+  transform: translateY(-2px);
 }

@@ -1,6 +1,16 @@
 import './Hero.css';
+import { openWhatsApp } from '../../utils/whatsapp';
 
 function Hero() {
+  const handleServicesClick = () => {
+    const servicesSection = document.getElementById('servicos');
+    servicesSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleWhatsAppClick = () => {
+    openWhatsApp('', 'hero');
+  };
+
   return (
     <section className="hero" id="home">
       <div className="hero-bg-effects">
@@ -17,10 +27,10 @@ function Hero() {
           Com planejamento e execução, cuidamos de cada detalhe para que seu evento seja perfeito.
         </p>
         <div className="hero-buttons">
-          <button className="primary-btn">
+          <button className="primary-btn" onClick={handleServicesClick}>
             <span>Nossos Serviços</span>
           </button>
-          <button className="secondary-btn">
+          <button className="secondary-btn" onClick={handleWhatsAppClick}>
             <span>Fale Conosco</span>
           </button>
         </div>
