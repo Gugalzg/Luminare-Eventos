@@ -6,18 +6,16 @@ function About() {
       <div className="about-content">
         <h2>Sobre a Luminare</h2>
         <p>
-          Há mais de 10 anos no mercado de eventos, a Luminare se dedica a criar 
-          experiências únicas e memoráveis. Nossa equipe especializada trabalha 
-          incansavelmente para transformar sua visão em realidade.
+          Uma marca nascida do encontro entre dois casais apaixonados por criar experiências memoráveis e encantadoras. 
+          Com criatividade acumulada e um olhar para os detalhes que transformam momentos em memórias, construímos uma 
+          empresa que ilumina celebrações com propósito, afeto e originalidade.
         </p>
         <p>
-          Acreditamos que cada evento é único e merece atenção especial. Por isso, 
-          oferecemos um atendimento personalizado, cuidando de todos os detalhes 
-          para garantir que seu evento seja perfeito.
+         A Luminare nasceu do desejo de tornar cada festa uma extensão única da personalidade de quem celebra. 
+         Acreditamos que a decoração tem o poder de emocionar, marcar histórias e envolver os convidados com beleza e significado.
         </p>
         <p>
-          Da concepção à execução, estamos ao seu lado em cada etapa, garantindo 
-          que tudo saia exatamente como você sonhou.
+           Aqui, cada projeto é pensado com carinho e personalização, porque acreditamos que o verdadeiro encantamento está nos detalhes.
         </p>
       </div>
     </section>
