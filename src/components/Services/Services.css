@@ -1,8 +1,10 @@
 .services {
-  padding: 6rem 5%;
-  background: white;
+  padding: 2rem 5% 4rem;
+  background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 50%, #fff8f5 100%);
   position: relative;
   overflow: hidden;
+  padding-top: 120px;
+  margin-top: -40px;
 }
 
 /* Background Elements */
@@ -15,26 +17,52 @@
   z-index: 1;
 }
 
+.section-bg::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(232, 184, 109, 0.12) 0%, transparent 60%);
+  border-radius: 50%;
+  animation: float 25s ease-in-out infinite;
+}
+
+.section-bg::after {
+  content: '';
+  position: absolute;
+  bottom: -10%;
+  left: -5%;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(139, 95, 191, 0.1) 0%, transparent 60%);
+  border-radius: 50%;
+  animation: float 30s ease-in-out infinite reverse;
+}
+
 .wave-1,
 .wave-2 {
   position: absolute;
   width: 120%;
-  height: 100px;
-  background: linear-gradient(90deg, transparent, rgba(139, 95, 191, 0.05), transparent);
+  height: 120px;
+  background: linear-gradient(90deg, transparent, rgba(139, 95, 191, 0.08), transparent);
+  border-radius: 50px;
+  filter: blur(1px);
 }
 
 .wave-1 {
-  top: 20%;
+  top: 27%;
   left: -10%;
-  transform: rotate(-2deg);
-  animation: float 15s ease-in-out infinite;
+  transform: rotate(-1.5deg);
+  animation: float 18s ease-in-out infinite;
 }
 
 .wave-2 {
-  bottom: 30%;
+  bottom: 25%;
   right: -10%;
-  transform: rotate(2deg);
-  animation: float 20s ease-in-out infinite reverse;
+  transform: rotate(1.5deg);
+  animation: float 22s ease-in-out infinite reverse;
 }
 
 .services h2 {
@@ -83,27 +111,19 @@
   border: 1px solid #f0f0f0;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 350px;
 }
 
 .service-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(139, 95, 191, 0.05), transparent);
-  transition: left 0.6s ease;
+  display: none;
 }
 
 .service-card:hover {
-  transform: translateY(-15px) scale(1.02);
-  box-shadow: 0 25px 70px rgba(139, 95, 191, 0.25);
-  border-color: rgba(139, 95, 191, 0.2);
-}
-
-.service-card:hover::before {
-  left: 100%;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(139, 95, 191, 0.15);
+  border-color: rgba(139, 95, 191, 0.3);
 }
 
 .service-icon {
@@ -122,25 +142,12 @@
 }
 
 .service-icon::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #E8B86D, #8B5FBF);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  border-radius: 50%;
+  display: none;
 }
 
 .service-card:hover .service-icon {
-  transform: rotateY(180deg) scale(1.1);
-  box-shadow: 0 10px 30px rgba(139, 95, 191, 0.4);
-}
-
-.service-card:hover .service-icon::before {
-  opacity: 1;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(139, 95, 191, 0.2);
 }
 
 .service-card h3 {
@@ -153,6 +160,29 @@
 .service-card p {
   color: #666;
   line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.service-btn {
+  background: linear-gradient(135deg, #8B5FBF, #E8B86D);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 1;
+  transform: translateY(0);
+  margin-top: auto;
+}
+
+.service-btn:hover {
+  background: linear-gradient(135deg, #7A4FA6, #D9A559);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(139, 95, 191, 0.3);
 }
 
 .card-glow {
@@ -161,7 +191,7 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(139, 95, 191, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(139, 95, 191, 0.05) 0%, transparent 70%);
   opacity: 0;
   transition: opacity 0.6s ease;
   z-index: -1;
@@ -169,5 +199,136 @@
 
 .service-card:hover .card-glow {
   opacity: 1;
-  animation: rotate 8s linear infinite;
+}
+
+/* Animações */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-15px) scale(1.02);
+  }
+}
+
+/* Responsividade Mobile */
+@media (max-width: 768px) {
+  .services {
+    padding: 80px 3% 3rem 3%;
+    margin-top: -20px;
+  }
+  
+  .services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 500px;
+  }
+  
+  .service-card {
+    padding: 2rem;
+    min-height: 300px;
+  }
+  
+  .service-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 1.8rem;
+  }
+  
+  .service-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  .service-card p {
+    font-size: 0.95rem;
+  }
+  
+  .service-btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.85rem;
+  }
+  
+  /* Reduzir elementos de fundo no mobile */
+  .section-bg::before {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .section-bg::after {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .wave-1,
+  .wave-2 {
+    height: 80px;
+  }
+}
+
+/* Para telas muito pequenas */
+@media (max-width: 480px) {
+  .services {
+    padding: 70px 2% 2rem 2%;
+  }
+  
+  .services h2 {
+    font-size: 2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .service-card {
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+  
+  .service-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+  
+  .service-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .service-card p {
+    font-size: 0.9rem;
+  }
+  
+  .service-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .services {
+    padding: 100px 4% 4rem 4%;
+  }
+  
+  .services h2 {
+    font-size: 2.8rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.8rem;
+  }
+  
+  .service-card {
+    padding: 2.2rem;
+  }
 }

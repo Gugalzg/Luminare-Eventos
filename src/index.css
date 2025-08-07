@@ -21,4 +21,6 @@ code {
 
 html {
   scroll-behavior: smooth;
+  /* Adiciona offset para âncoras para compensar header fixo */
+  scroll-padding-top: 100px;
 }
