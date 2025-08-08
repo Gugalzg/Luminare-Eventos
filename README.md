@@ -26,26 +26,6 @@ Este é o website oficial da Luminare Eventos, desenvolvido em React para aprese
 - **Google Fonts (Poppins)** - Tipografia moderna e elegante
 - **Create React App** - Configuração inicial do projeto
 
-## 🎨 Serviços Oferecidos
-
-### 🎉 Festas Corporativas
-Eventos empresariais únicos que fortalecem sua marca e conectam sua equipe.
-
-### 💍 Casamentos
-Celebrações de amor personalizadas, cuidando de cada detalhe do seu dia especial.
-
-### 🎂 Aniversários
-Festas de aniversário memoráveis para todas as idades e gostos.
-
-### 🎓 Formaturas
-Cerimônias de formatura elegantes para celebrar suas conquistas.
-
-### 🏢 Eventos Empresariais
-Conferências, seminários e workshops profissionais de alto nível.
-
-### 🎪 Eventos Temáticos
-Experiências imersivas com temas personalizados e decoração exclusiva.
-
 ## 🛠️ Instalação e Execução
 
 ### Pré-requisitos
