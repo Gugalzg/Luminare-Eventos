@@ -92,11 +92,23 @@ Obrigado!`;
               ))}
             </ul>
           </div>
-          
-          <div className="modal-pricing">
-            <h4>Investimento:</h4>
-            <p className="price-info">{service.pricing}</p>
-          </div>
+       {/* CORREÇÃO: Só mostra seção de Investimento se tiver pricing */}
+          {service.pricing && (
+            <div className="modal-pricing">
+              <div className="pricing-header">
+                <h4>💰 Investimento</h4>
+              </div>
+              <div className="price-display">
+                <span 
+                  className="price-value" 
+                  dangerouslySetInnerHTML={{ __html: service.pricing }}
+                ></span>
+                {service.priceNote && (
+                  <span className="price-note">{service.priceNote}</span>
+                )}
+              </div>
+            </div>
+          )}
         </>
       );
     }
@@ -132,7 +144,11 @@ Obrigado!`;
         </div>
         
         <div className="modal-features">
-          <h4>O que inclui no <span className={currentDetails.colorClass}>{packageData.name}</span>:</h4>
+          <h4>
+            <span className={currentDetails.colorClass}>
+              {packageData.name}
+            </span> - O que inclui:
+          </h4>
           <ul className="features-list">
             {packageData.features.map((feature, index) => (
               <li key={index}>{feature}</li>
@@ -141,8 +157,15 @@ Obrigado!`;
         </div>
         
         <div className="modal-pricing">
-          <h4>Investimento:</h4>
-          <p className="price-info">{packageData.pricing}</p>
+          <div className="pricing-header">
+            <h4>💰 Investimento</h4>
+          </div>
+          <div className="price-display">
+            <span className="price-value">{packageData.pricing}</span>
+            {packageData.priceNote && (
+              <span className="price-note">{packageData.priceNote}</span>
+            )}
+          </div>
         </div>
       </>
     );

@@ -1,0 +1,59 @@
+.typewriter-text {
+  display: inline-block;
+  position: relative;
+}
+
+.cursor {
+  display: inline-block;
+  background: linear-gradient(135deg, #8B5FBF, #E8B86D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: blink 1s infinite;
+  font-weight: bold;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+.typewriter-highlight {
+  background: linear-gradient(135deg, #8B5FBF, #E8B86D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .typewriter-text {
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .typewriter-highlight {
+    display: inline-block;
+  }
+  
+  .cursor {
+    margin-left: 1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .typewriter-highlight {
+    font-size: inherit;
+    line-height: inherit;
+  }
+  
+  .cursor {
+    font-size: inherit;
+  }
+}

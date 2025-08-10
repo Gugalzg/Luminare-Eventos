@@ -1,5 +1,6 @@
 import './Hero.css';
 import { openWhatsApp } from '../../utils/whatsapp';
+import TypewriterText from './TypewriterText';
 
 function Hero() {
   const handleServicesClick = () => {
@@ -11,6 +12,12 @@ function Hero() {
     openWhatsApp('', 'hero');
   };
 
+  const typewriterTexts = [
+    "experiências únicas",
+    "momentos inesquecíveis", 
+    "celebrações especiais"
+  ];
+
   return (
     <section className="hero" id="home">
       <div className="hero-bg-effects">
@@ -18,9 +25,10 @@ function Hero() {
         <div className="glow-orb orb2"></div>
         <div className="glow-orb orb3"></div>
       </div>
+      
       <div className="hero-content">
         <h1>
-          Criamos <span className="highlight">experiências únicas</span> para seus eventos especiais
+          Criamos <TypewriterText texts={typewriterTexts} speed={100} pauseTime={2500} /> para seus eventos
         </h1>
         <p>
           Na Luminare Eventos, transformamos suas ideias em momentos inesquecíveis. 
@@ -35,6 +43,7 @@ function Hero() {
           </button>
         </div>
       </div>
+      
       <div className="hero-visual">
         <div className="logo-container">
           <div className="floating-shape shape1"></div>
