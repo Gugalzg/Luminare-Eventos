@@ -167,18 +167,18 @@
 }
 
 .package-start {
-  background: linear-gradient(135deg, #28a745, #20c997);
+  background: linear-gradient(135deg, #8B5FBF, #E8B86D);
   color: white;
-  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+  box-shadow: 0 4px 15px rgba(139, 95, 191, 0.3);
 }
 
 .package-start.active {
-  box-shadow: 0 8px 25px rgba(40, 167, 69, 0.5);
+  box-shadow: 0 8px 25px rgba(139, 95, 191, 0.5);
 }
 
 .package-start:hover {
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
+  box-shadow: 0 8px 25px rgba(139, 95, 191, 0.4);
 }
 
 .package-prime {
@@ -223,7 +223,7 @@
 
 /* Cores específicas para o nome dos pacotes no título */
 .modal-features h4 .package-name-start {
-  color: #28a745;
+  color: #8B5FBF;
   font-weight: 700;
 }
 
@@ -414,6 +414,22 @@
   transform: translate(-50%, -50%);
 }
 
+.modal-btn-only {
+  width: auto !important;
+  min-width: 120px;
+  background: rgba(139, 95, 191, 0.1) !important;
+  color: #8B5FBF !important;
+  border: 2px solid rgba(139, 95, 191, 0.3) !important;
+  margin: 0 auto;
+}
+
+.modal-btn-only:hover {
+  background: #8B5FBF !important;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(139, 95, 191, 0.3);
+}
+
 .modal-btn:hover::before {
   width: 240px; /* REDUZIDO: de 300px para 240px (20% menor) */
   height: 240px;
@@ -523,6 +539,11 @@
     overflow-y: auto;
     padding: 1.5rem;
     padding-bottom: 0;
+  }
+
+  .modal-btn-only {
+    width: 100% !important;
+    margin: 0;
   }
   
   .modal-description {

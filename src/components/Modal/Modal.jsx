@@ -171,45 +171,47 @@ Obrigado!`;
     );
   };
 
-  return (
-    <div className={`modal-overlay ${isOpen ? 'active' : ''}`} onClick={handleOverlayClick}>
-      <div className="modal-content">
-        <div className="modal-header">
-          <div className="modal-title">
-            <div className="modal-icon">{service.icon}</div>
-            <span>{service.title}</span>
+return (
+  <div className={`modal-overlay ${isOpen ? 'active' : ''}`} onClick={handleOverlayClick}>
+    <div className="modal-content">
+      <div className="modal-header">
+        <div className="modal-title">
+          <div className="modal-icon">{service.icon}</div>
+          <span>{service.title}</span>
+        </div>
+        <button className="modal-close" onClick={onClose}>
+          ×
+        </button>
+      </div>
+      
+      <div className="modal-body">
+        <p className="modal-description">
+          {service.fullDescription}
+        </p>
+        
+        {/* Botões de pacotes para "Pegue e Monte" */}
+        {service.title === 'Pegue e Monte' && service.packages && (
+          <div className="package-buttons">
+            <button 
+              className={`package-btn package-start ${activePackage === 'start' ? 'active' : ''}`}
+              onClick={() => setActivePackage('start')}
+            >
+              Pacote Start
+            </button>
+            <button 
+              className={`package-btn package-prime ${activePackage === 'prime' ? 'active' : ''}`}
+              onClick={() => setActivePackage('prime')}
+            >
+              Pacote Prime
+            </button>
           </div>
-          <button className="modal-close" onClick={onClose}>
-            ×
-          </button>
-        </div>
+        )}
         
-        <div className="modal-body">
-          <p className="modal-description">
-            {service.fullDescription}
-          </p>
-          
-          {/* Botões de pacotes para "Pegue e Monte" */}
-          {service.title === 'Pegue e Monte' && service.packages && (
-            <div className="package-buttons">
-              <button 
-                className={`package-btn package-start ${activePackage === 'start' ? 'active' : ''}`}
-                onClick={() => setActivePackage('start')}
-              >
-                Pacote Start
-              </button>
-              <button 
-                className={`package-btn package-prime ${activePackage === 'prime' ? 'active' : ''}`}
-                onClick={() => setActivePackage('prime')}
-              >
-                Pacote Prime
-              </button>
-            </div>
-          )}
-          
-          {renderPackageContent()}
-        </div>
-        
+        {renderPackageContent()}
+      </div>
+      
+      {/* CONDIÇÃO: Só mostra ações se NÃO for um dos serviços sem orçamento */}
+      {!['Balão Bubble Personalizado', 'Filtros para Instagram', 'Convites Digitais'].includes(service.title) && (
         <div className="modal-actions">
           <button className="modal-btn modal-btn-primary" onClick={handleWhatsAppClick}>
             {service.title === 'Pegue e Monte' && service.packages 
@@ -221,9 +223,19 @@ Obrigado!`;
             Fechar
           </button>
         </div>
-      </div>
+      )}
+      
+      {/* BOTÃO ESPECIAL: Só mostra "Fechar" para serviços sem orçamento */}
+      {['Balão Bubble Personalizado', 'Filtros para Instagram', 'Convites Digitais'].includes(service.title) && (
+        <div className="modal-actions">
+          <button className="modal-btn modal-btn-secondary modal-btn-only" onClick={onClose}>
+            Fechar
+          </button>
+        </div>
+      )}
     </div>
-  );
+  </div>
+);
 }
 
 export default Modal;
