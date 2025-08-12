@@ -41,7 +41,7 @@ function Services() {
     {
       icon: "🧩",
       title: "Pegue e Monte",
-      desc: "Decorações personalizadas e práticas que você pode montar facilmente em casa, com tudo inclusivo para criar um ambiente incrível a partir de R$130,00.",
+      desc: "Decorações personalizadas e práticas que você pode montar facilmente em casa, com tudo inclusivo para criar um ambiente incrível.",
       fullDescription:
         'Nosso serviço "Pegue e Monte" é perfeito para quem deseja uma festa linda sem complicações. Você recebe todo o material decorativo organizado e com instruções detalhadas para montar sua decoração em casa. É prático, econômico e você tem total controle sobre o processo.',
       packages: {
@@ -55,7 +55,7 @@ function Services() {
             "Vasos com Arbusto",
             "Capa Temática",
           ],
-          pricing: "R$ 130,00",
+          pricing: "R$130,00",
         },
         prime: {
           name: "Pacote Prime",
@@ -79,7 +79,7 @@ function Services() {
         "Suporte via WhatsApp durante a montagem",
         "Possibilidade de personalização das cores",
       ],
-      pricing: "A partir de R$ 130,00",
+      pricing: "A partir de R$130,00",
       priceNote: "Valor varia conforme pacote escolhido"
     },
       {
@@ -95,7 +95,7 @@ function Services() {
         "Vasos com Arbusto",
         "Capa Temática",
       ],
-      pricing: "A partir de R$ 50,00",
+      pricing: "A partir de R$50,00",
     },
     {
       icon: "🎂",
@@ -111,7 +111,7 @@ function Services() {
         "Bandejas",
         "Vasos com Arbusto",
       ],
-      pricing: 'De<span class="price-original">R$ 550,00</span> por <span class="price-current">R$ 440,00</span>',
+      pricing: 'De<span class="price-original">R$550,00</span> por <span class="price-current">R$440,00</span>',
     },
     {
       icon: "🎈",
@@ -187,7 +187,7 @@ function Services() {
             className={`service-card ${isVisible ? 'wave-visible' : ''}`}
             key={index}
             style={{
-              animationDelay: `${index * 0.1}s` // Delay muito pequeno apenas para um efeito suave
+              animationDelay: `${index * 0.1}s`
             }}
           >
             <div className="service-icon">
@@ -195,6 +195,18 @@ function Services() {
             </div>
             <h3>{service.title}</h3>
             <p>{service.desc}</p>
+            
+            {/* Preço destacado para Pegue e Monte e Mini Festa */}
+            {(service.title === "Pegue e Monte" || service.title === "Mini Festa") && service.pricing && (
+              <div className="service-price">
+                <span className="service-price-value">{service.pricing}</span>
+              </div>
+            )}
+            {service.title === "Kit Mêsversário" && service.pricing && (
+              <div className="service-price">
+                <span className="service-price-value">A partir de R$440,00</span>
+              </div>
+            )}
             <button
               className="service-btn"
               onClick={() => openModal(service)}
