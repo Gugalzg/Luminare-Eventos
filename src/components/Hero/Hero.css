@@ -281,8 +281,11 @@
   
   /* Ajuste para typewriter no mobile */
   .hero h1 .typewriter-text {
-    display: block;
-    margin: 0.3rem 0; /* MOBILE 100%: volta ao original (era 0.24rem) */
+    display: inline-block;
+    min-width: 220px; /* ajuste para o maior texto do seu array */
+    min-height: 1.2em;
+    text-align: center;
+    transition: none;
   }
   
   .hero p {

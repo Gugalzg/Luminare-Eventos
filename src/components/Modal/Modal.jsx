@@ -225,6 +225,7 @@ return (
         </div>
       )}
       
+      
       {/* BOTÃO ESPECIAL: Só mostra "Fechar" para serviços sem orçamento */}
       {['Balão Bubble Personalizado', 'Filtros para Instagram', 'Convites Digitais'].includes(service.title) && (
         <div className="modal-actions">
