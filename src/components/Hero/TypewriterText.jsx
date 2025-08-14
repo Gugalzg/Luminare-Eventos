@@ -37,10 +37,40 @@ function TypewriterText({ texts, speed = 120, pauseTime = 2000 }) {
     return () => clearTimeout(timeout);
   }, [currentText, isDeleting, currentTextIndex, texts, speed, isPaused, pauseTime]);
 
+  // Função para dividir o texto em duas linhas
+  const formatText = (text) => {
+    const words = text.split(' ');
+    if (words.length >= 2) {
+      return {
+        firstLine: words[0],
+        secondLine: words.slice(1).join(' ')
+      };
+    }
+    return {
+      firstLine: text,
+      secondLine: ''
+    };
+  };
+
+  const { firstLine, secondLine } = formatText(currentText);
+  
+  // Determinar onde colocar o cursor
+  const firstLineComplete = currentText.includes(' ');
+  const showCursorOnSecondLine = firstLineComplete && secondLine.length > 0;
+
   return (
     <span className="typewriter-text">
-      <span className="typewriter-highlight">{currentText}</span>
-      <span className="cursor">|</span>
+      <span className="typewriter-lines">
+        <span className="typewriter-line typewriter-highlight">
+          {firstLine}
+          {!firstLineComplete && <span className="cursor">|</span>}
+        </span>
+        <span className="typewriter-line typewriter-highlight">
+          {secondLine}
+          {showCursorOnSecondLine && <span className="cursor">|</span>}
+          {!showCursorOnSecondLine && firstLineComplete && currentText.endsWith(' ') && <span className="cursor">|</span>}
+        </span>
+      </span>
     </span>
   );
 }

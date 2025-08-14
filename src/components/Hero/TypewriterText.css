@@ -1,6 +1,31 @@
 .typewriter-text {
   display: inline-block;
   position: relative;
+  /* Definir largura mínima para evitar mudanças de layout */
+  min-width: 320px;
+  text-align: left; /* Mudança: alinhamento à esquerda para desktop */
+  /* Altura fixa para duas linhas */
+  min-height: 2.5em;
+  display: flex;
+  align-items: flex-start; /* Mudança: alinhamento à esquerda para desktop */
+  justify-content: flex-start; /* Mudança: justificação à esquerda para desktop */
+}
+
+.typewriter-lines {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Mudança: alinhamento à esquerda para desktop */
+  justify-content: flex-start; /* Mudança: justificação à esquerda para desktop */
+  line-height: 1.2;
+  width: 100%;
+}
+
+.typewriter-line {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Mudança: justificação à esquerda para desktop */
+  min-height: 1.2em;
+  width: 100%;
 }
 
 .cursor {
@@ -29,17 +54,34 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: 700;
+  /* Garantir que o texto não quebre */
+  white-space: nowrap;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
   .typewriter-text {
-    display: inline-block;
+    /* Ajustar largura mínima para mobile */
+    min-width: 320px;
+    width: 320px;
+    /* Altura um pouco maior para mobile */
+    min-height: 2.8em;
+    /* Voltar ao centro no mobile */
     text-align: center;
+    align-items: center;
+    justify-content: center;
   }
   
-  .typewriter-highlight {
-    display: inline-block;
+  .typewriter-lines {
+    /* Voltar ao centro no mobile */
+    align-items: center;
+    justify-content: center;
+    gap: 0.1em;
+  }
+  
+  .typewriter-line {
+    /* Voltar ao centro no mobile */
+    justify-content: center;
   }
   
   .cursor {
@@ -48,12 +90,28 @@
 }
 
 @media (max-width: 480px) {
-  .typewriter-highlight {
+  .typewriter-text {
+    /* Reduzir um pouco para telas menores mas manter fixo */
+    min-width: 280px;
+    width: 280px;
+    min-height: 2.6em;
+  }
+  
+  .typewriter-line {
     font-size: inherit;
     line-height: inherit;
   }
   
   .cursor {
     font-size: inherit;
+  }
+}
+
+@media (max-width: 350px) {
+  .typewriter-text {
+    /* Para telas muito pequenas */
+    min-width: 240px;
+    width: 240px;
+    min-height: 2.4em;
   }
 }
