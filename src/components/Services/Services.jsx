@@ -55,7 +55,7 @@ function Services() {
             "Vasos com Arbusto",
             "Capa Temática",
           ],
-          pricing: "R$130,00",
+          pricing: "R$150,00",
         },
         prime: {
           name: "Pacote Prime",
@@ -79,7 +79,7 @@ function Services() {
         "Suporte via WhatsApp durante a montagem",
         "Possibilidade de personalização das cores",
       ],
-      pricing: "A partir de R$130,00",
+      pricing: "A partir de R$150,00",
       priceNote: "Valor varia conforme pacote escolhido"
     },
       {
